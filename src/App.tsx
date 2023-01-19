@@ -1,9 +1,10 @@
-import TestLess from "./test-less";
+import TestLess from "./pages/test-less";
+import TestEnv from "./pages/test-env";
+
 function App() {
-  const env = import.meta.env;
-  console.log("import.meta.env", env);
   return (
     <div className="App">
+      <TestEnv />
       <TestLess />
     </div>
   );
