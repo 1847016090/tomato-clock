@@ -2,6 +2,16 @@ import { defineConfig } from "vite";
 import useReact from "@vitejs/plugin-react";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
+import path from "path";
+import fs from "fs";
+import process from "process";
+
+const appDirectory = fs.realpathSync(process.cwd());
+
+/** @name 根据项目路径获取绝对路径 */
+const resolveAbsolutePath = (relativePath: string) => {
+  return path.resolve(appDirectory, relativePath);
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -27,5 +37,15 @@ export default defineConfig({
       // 配置处理类名前缀，兼容不同内核的浏览器
       plugins: [autoprefixer, cssnano],
     },
+  },
+  // ! 配置 resolve
+  resolve: {
+    // 配置别名
+    alias: {
+      "@": resolveAbsolutePath("./src/"),
+      "~": resolveAbsolutePath("./node_modules/"),
+    },
+    // vite 内置了一下类型
+    // extensions:['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
   },
 });
