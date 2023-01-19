@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import useReact from "@vitejs/plugin-react";
 import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
+import cssNano from "cssnano";
 import path from "path";
 import fs from "fs";
 import process from "process";
@@ -35,7 +35,7 @@ export default defineConfig({
     },
     postcss: {
       // 配置处理类名前缀，兼容不同内核的浏览器
-      plugins: [autoprefixer, cssnano],
+      plugins: [autoprefixer, cssNano],
     },
   },
   // ! 配置 resolve
@@ -47,5 +47,13 @@ export default defineConfig({
     },
     // vite 内置了一下类型
     // extensions:['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+  },
+  // ! 配置项目的JSON数据引用
+  json: {
+    // 是否支持从 .json 文件中进行按名导入
+    namedExports: true,
+    // 导入的 JSON 会被转换为 export default JSON.parse("...")，这样会比转译成对象字面量性能更好，尤其是当 JSON 文件较大的时候
+    // 开启此项，则会禁用按名导入。
+    stringify: false,
   },
 });
