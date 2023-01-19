@@ -37,6 +37,17 @@ export default defineConfig({
       // 配置处理类名前缀，兼容不同内核的浏览器
       plugins: [autoprefixer, cssNano],
     },
+    preprocessorOptions: {
+      less: {
+        // less文件注入公用的变量以及类名
+        modifyVars: {
+          hack: `true; @import (reference) "${resolveAbsolutePath(
+            "./src/assets/style/index.less"
+          )}";`,
+        },
+        javascriptEnabled: true,
+      },
+    },
   },
   // ! 配置 resolve
   resolve: {

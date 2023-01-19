@@ -6,6 +6,7 @@ specifiers:
   '@types/react-dom': ^18.0.9
   '@vitejs/plugin-react': ^3.0.0
   autoprefixer: ^10.4.13
+  classnames: ^2.3.2
   cssnano: ^5.1.14
   fs: 0.0.1-security
   less: ^4.1.3
@@ -18,6 +19,7 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
+  classnames: registry.npmjs.org/classnames/2.3.2
   less: 4.1.3
   postcss: 8.4.21
   react: 18.2.0
@@ -1639,6 +1641,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  registry.npmjs.org/classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/classnames/-/classnames-2.3.2.tgz}
+    name: classnames
+    version: 2.3.2
+    dev: false
 
   registry.npmjs.org/errno/0.1.8:
     resolution: {integrity: sha512-dJ6oBr5SQ1VSd9qkk7ByRgb/1SH4JZjCHSW/mr63/QcXO9zLVxvJ6Oy13nio03rxpSnVDDjFor75SjVeZWPW/A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/errno/-/errno-0.1.8.tgz}
