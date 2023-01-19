@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --host --mode=dev --config ./config/vite.dev.config.ts --open",
-    "build": "tsc && vite build --mode=test --watch --config ./config/vite.prod.config.ts",
+    "start": "vite --host --config ./config/vite.dev.config.ts --open",
+    "build": "tsc && vite build --config ./config/vite.prod.config.ts",
     "preview": "vite preview --host --open"
   },
   "dependencies": {

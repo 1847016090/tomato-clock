@@ -3,6 +3,7 @@ import { defineConfig, mergeConfig } from "vite";
 
 /** @name 开发环境配置 */
 const devConfig = defineConfig({
+  mode: "development",
   css: {
     // css开始sourceMap
     devSourcemap: true,
