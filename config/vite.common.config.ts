@@ -67,4 +67,39 @@ export default defineConfig({
     // 开启此项，则会禁用按名导入。
     stringify: false,
   },
+  // ! 静态资源处理，内置了
+  // images
+  // 'png',
+  // 'jpe?g',
+  // 'jfif',
+  // 'pjpeg',
+  // 'pjp',
+  // 'gif',
+  // 'svg',
+  // 'ico',
+  // 'webp',
+  // 'avif',
+
+  // // media
+  // 'mp4',
+  // 'webm',
+  // 'ogg',
+  // 'mp3',
+  // 'wav',
+  // 'flac',
+  // 'aac',
+
+  // // fonts
+  // 'woff2?',
+  // 'eot',
+  // 'ttf',
+  // 'otf',
+
+  // // other
+  // 'webmanifest',
+  // 'pdf',
+  // 'txt'
+  // assetsInclude: [],
+  // !配置静态资源服务的路径，默认的路径wei 'public'
+  publicDir: "public",
 });
