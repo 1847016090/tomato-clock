@@ -102,4 +102,6 @@ export default defineConfig({
   // assetsInclude: [],
   // !配置静态资源服务的路径，默认的路径wei 'public'
   publicDir: "public",
+  // !关闭日志清屏开关
+  clearScreen: false,
 });
