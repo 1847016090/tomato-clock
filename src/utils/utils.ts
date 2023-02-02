@@ -1,4 +1,4 @@
 /** @name 测试方法 */
-export const testAlias = () => {
-  return "testAlias";
+export const testAlias = (aaa) => {
+  return aaa;
 };

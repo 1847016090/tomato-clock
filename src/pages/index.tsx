@@ -4,6 +4,7 @@ import TestAlias from "./test-alias";
 import TestJson from "./test-json";
 import TestGlobal from "./test-global-vars";
 import { CaseWrapper } from "@/components";
+import TestComponents from "./test-components";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <TestAlias title="测试别名" />
       <TestEnv title="测试环境变量" />
       <TestLess title="测试CSS预处理器" />
+      <TestComponents title="测试@rokid-library/components" />
     </CaseWrapper>
   );
 }
