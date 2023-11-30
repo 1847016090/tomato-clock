@@ -1,36 +1,8 @@
-# vite + react 模版搭建
+# tuari-vite-template
 
-## 下载基础模版
-
-1. `pnpm create vite` 下载最新的 react 项目模版
-
-## 配置别名
-
-1. `vite.common.config.ts`里面配置路径
-
-```typescript
-{
-  resolve: {
-    // 配置别名
-    alias: {
-      "@": resolveAbsolutePath("./src/"),
-      "~": resolveAbsolutePath("./node_modules/"),
-    },
-  },
-}
+## 记录问题
+1. 使用`pnpm tauri dev`启动项目时，`rust`装依赖报以下错误:
 ```
-
-2. `tsconfig.json` 里面别名引用时的提示
-
-```json
-{
-  "compilerOptions": {
-    // 解决应用时输入 @/ 之后能自动提示src下面的路径
-    "baseUrl": ".",
-    // 解决应用别名时不报错
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
-}
+tauri use of unstable library feature 'once_cell'
 ```
+这个问题主要是当前的rust不是最新版本,我们只需要执行`rustup update`命令重新更新即可
