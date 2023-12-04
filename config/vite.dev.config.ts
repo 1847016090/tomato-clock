@@ -11,7 +11,7 @@ const devConfig = defineConfig({
   server: {
     // 指定开发服务器端口，如果被占用，会自动切换其他端口
     port: 8888,
-    open: true,
+    // open: true,
     // 设置代理
     proxy: {
       "/api": {
