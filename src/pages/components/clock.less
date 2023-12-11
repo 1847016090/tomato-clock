@@ -1,0 +1,40 @@
+.alarm-clock {
+  position: relative;
+  width: 262px;
+  height: 258px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  // border: 2px solid white;
+  background-image: url(./alarm.png);
+  background-size: cover;
+  .second-pointer,
+  .minute-pointer,
+  .hour-pointer {
+    position: absolute;
+    border-radius: 4px;
+    transition: transform;
+    transform-origin: 0% 50%;
+    left: 50%;
+    top: 50%;
+  }
+  .second-pointer {
+    z-index: 2;
+    height: 2px;
+    width: 80px;
+    background-color: red;
+  }
+  .minute-pointer {
+    z-index: 1;
+    background-color: white;
+    height: 4px;
+    width: 60px;
+  }
+
+  // .hour-pointer {
+  //   z-index: 1;
+  //   background-color: white;
+  //   height: 6px;
+  //   width: 40px;
+  //   transform: translateY(-50%) rotateZ(150deg);
+  // }
+}

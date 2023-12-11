@@ -1,4 +1,4 @@
-import Pages from "@/pages";
+import Pages from "@/pages/index_old";
 
 function App() {
   return (

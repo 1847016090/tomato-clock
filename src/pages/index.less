@@ -1,0 +1,38 @@
+.clock-container {
+  background-color: #000;
+  height: 100%;
+  width: 100vw;
+  gap: 60px;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .timer {
+    font-size: 100px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 6px;
+  }
+  .types {
+    display: flex;
+    gap: 12px;
+  }
+  .long,
+  .short {
+    cursor: pointer;
+    font-size: 14px;
+    background: linear-gradient(90deg, #f441a5, #03a9f4, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    width: 175px;
+    height: 45px;
+    color: #fff;
+    box-sizing: border-box;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50px;
+    z-index: 1;
+    border: none;
+  }
+}
