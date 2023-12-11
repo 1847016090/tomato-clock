@@ -7,6 +7,7 @@ import { formatSeconds } from "./utils";
 import { message } from "antd";
 import pause from "@/assets/pause.svg";
 import play from "@/assets/play.svg";
+import stop from "@/assets/stop.svg";
 
 interface HomeProps {}
 enum ClockStatusEnum {
@@ -31,7 +32,7 @@ const Home: React.FC<HomeProps> = () => {
     } else if (time === 0) {
       message.success("任务已结束");
       playClock();
-      setTime(-1);
+      onStop();
     }
     return () => {
       timeRef.current && clearTimeout(timeRef.current);
@@ -46,8 +47,8 @@ const Home: React.FC<HomeProps> = () => {
 
   const onWork = () => {
     const workTime = 25 * 60;
-    setTime(workTime);
     setStatus(ClockStatusEnum.Play);
+    setTime(workTime);
     setInitialTime(workTime);
   };
 
@@ -64,6 +65,11 @@ const Home: React.FC<HomeProps> = () => {
 
   const onPause = () => {
     setStatus(ClockStatusEnum.Pause);
+  };
+
+  const onStop = () => {
+    setStatus(ClockStatusEnum.Stop);
+    setTime(-1);
   };
 
   const content = useMemo(() => {
@@ -106,6 +112,14 @@ const Home: React.FC<HomeProps> = () => {
       <AlarmClock time={time} initialTime={initialTime} />
       <div className="timer">{formatSeconds(time)}</div>
       <div className="types">{content}</div>
+      {status !== ClockStatusEnum.Stop && (
+        <img
+          className="status-icon stop"
+          src={stop}
+          title="点击终止该次番茄钟"
+          onClick={onStop}
+        />
+      )}
     </div>
   );
 };
